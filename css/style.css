@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    background: #0e0c0c49;
+    width: 100%;
+}
+body{
+    background-image: url('../img/montaña.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.myTodo{
+    width: auto;
+    height: auto;
+    background-color: rgba(255, 255, 255,0.19);
+    backdrop-filter: blur(8px);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenedor-tareas{
+    width: auto;
+    padding: 40px 40px 30px 40px;
+}
+.contenedor-tareas input{
+    padding: 7px;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+}
+.contenedor-tareas button{
+    margin: 0 10px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+}
+.contenedor-tareas button:active{
+    transform: scale(1.1);
+}
+.contenedor-todoLista{
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+.todoLista{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0,0,0,.25);
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.texto{
+    width: 90%;
+    padding: 10px;
+}
+.button{
+    width: 10%;
+}
+.button button{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-color: transparent;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.5s ease-in;
+}
+.button button:hover{
+    background-color: brown;
+    color: #fff;   
+}
+.limpiarItems{
+    width: auto;
+    height: 40px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    transition: background-color 0.5s ease-in;
+}
+.limpiarItems:hover{
+    background-color: brown;
+    color: #fff;
+}
+.limpiarItems:active{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px){
+    .myTodo{
+        width: 100%;
+    }
+    .contenedor-tareas{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 40px 20px 30px 20px;
+        width: 100%;
+    }
+    .contenedor-tareas input{
+        padding: 10px;
+        width: 100%;
+    }
+    .contenedor-tareas  button{
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+    .contenedor-tareas button:active{
+        transform: scale(1);
+    }
+    .limpiarItems{
+        background-color: brown;
+        color: #fff;
+    }
+    .limpiarItems:active{
+        transform: scale(1);
+    }
+}
